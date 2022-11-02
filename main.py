@@ -6,6 +6,8 @@ import pickle
 import datetime
 
 
+st.write("# Creating a portfolio out of Nifty50 Stocks")
+
 URL = "https://www1.nseindia.com/content/indices/ind_nifty50list.csv"
 start = st.date_input("Input Simulation Start date", value=(datetime.datetime(year=2020, month=10, day=1)))
 simulation_start = datetime.datetime(start.year, start.month, start.day).replace(tzinfo=pytz.UTC)
