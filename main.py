@@ -81,8 +81,8 @@ for stock in strategy_top_10:
 
 strategy_curve = [company_prices_df_dict[stock[0]]["Close"] * strategy_stocks[stock[0]] for stock in strategy_top_10]
 
-curve_df = pd.DataFrame({"Base Strategy": sum(equity_curve),
-                         "Nifty50 Index": index_curve, "Strategy": sum(strategy_curve)})
+curve_df = pd.DataFrame({"Equal alloc buy hold": sum(equity_curve),
+                         "Nifty": index_curve, "Performance_strat": sum(strategy_curve)})
 
 
 st.line_chart(curve_df)
